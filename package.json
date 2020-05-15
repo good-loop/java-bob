@@ -10,7 +10,8 @@
     "url": "https://github.com/good-loop/java-bob"
   },
   "keywords": [
-    "java", "build tool"
+    "java",
+    "build tool"
   ],
   "author": "Daniel Winterstein <daniel@good-loop.com> (https://winterstein.me.uk)",
   "license": "MIT",
