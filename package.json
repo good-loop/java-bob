@@ -2,17 +2,22 @@
   "name": "java-bob",
   "version": "0.1.0",
   "description": "Bob-the-Builder",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "bob": "bin/bob.js"
   },
   "repository": {
     "type": "git",
-    "url": "todogit"
+    "url": "https://github.com/good-loop/java-bob"
   },
   "keywords": [
-    "java"
+    "java", "build tool"
   ],
-  "author": "Daniel",
-  "license": "MIT"
+  "author": "Daniel Winterstein <daniel@good-loop.com> (https://winterstein.me.uk)",
+  "license": "MIT",
+  "homepage": "https://www.winterwell.com/software/bob/",
+  "dependencies": {
+    "shelljs": "^0.8.2",
+    "https": "^1.0.0",
+    "fs": "^0.0.1-security"
+  }
 }
