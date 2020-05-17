@@ -1,7 +1,7 @@
 {
   "name": "java-bob",
   "version": "0.9.0",
-  "description": "Bob-the-Builder",
+  "description": "Bob-the-Builder - compile / build / deploy code with Java scripts. Plays nicely with Maven and bash.",
   "bin": {
     "bob": "bin/bob.js"
   },
@@ -17,8 +17,8 @@
   "license": "MIT",
   "homepage": "https://www.winterwell.com/software/bob/",
   "dependencies": {
-    "shelljs": "^0.8.2",
+    "fs": "^0.0.1-security",
     "https": "^1.0.0",
-    "fs": "^0.0.1-security"
+    "shelljs": "^0.8.2"
   }
 }
