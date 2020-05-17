@@ -31,5 +31,5 @@ if ( ! jarExists || args[0]==="-update" || args[0]==="--update") {
 	return;
 }
 
-shell.exec("java -jar "+jar" "+args.join(" "));
+shell.exec("java -jar "+jar+" "+args.join(" "));
 
