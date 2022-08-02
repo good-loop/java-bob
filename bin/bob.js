@@ -21,11 +21,12 @@ if (process.env.HOME && fs.existsSync(process.env.HOME)) {
 
 //console.log(process.argv);
 const args = [...process.argv];
-// shidt node command, script path
+// shift node command, script path
 args.shift();	
 const dirPath = args.shift();
-
-const ocmd = "java -jar "+jarFile+" "+args.join(" ");
+// Java 17+ needs explicit permisions for reflection :'(
+const openJavaSecurity = "--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED"; // not needed: --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/sun.security.pkcs=ALL-UNNAMED
+const ocmd = "java -jar "+jarFile+" "+openJavaSecurity+" "+args.join(" ");
 
 const jarExists = fs.existsSync(jarFile);
 
@@ -46,7 +47,7 @@ if ( ! jarExists || args[0]==="-update" || args[0]==="--update") {
 		// shell.exec(ocmd);
 		// return;
 	});
-	console.log("Note: If you get a message 'Invalid or corrupt jarfile' - Try re-running "+cmd+" -update to download the jar again.");
+	// console.log("Note: If you get a message 'Invalid or corrupt jarfile' - Try re-running "+cmd+" -update to download the jar again.");
 	return;
 } else {
 
