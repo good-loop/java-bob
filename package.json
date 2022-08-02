@@ -1,6 +1,6 @@
 {
   "name": "java-bob",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bob-the-Builder - compile / build / deploy code with Java scripts. Plays nicely with Maven and bash.",
   "bin": {
     "bob": "bin/bob.js"

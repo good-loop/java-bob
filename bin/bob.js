@@ -26,7 +26,7 @@ args.shift();
 const dirPath = args.shift();
 // Java 17+ needs explicit permisions for reflection :'(
 const openJavaSecurity = "--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED"; // not needed: --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/sun.security.pkcs=ALL-UNNAMED
-const ocmd = "java -jar "+jarFile+" "+openJavaSecurity+" "+args.join(" ");
+const ocmd = "java "+openJavaSecurity+" -jar "+jarFile+" "+args.join(" ");
 
 const jarExists = fs.existsSync(jarFile);
 
